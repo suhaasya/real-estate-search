@@ -7,12 +7,10 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/1.jpg",
     type: "Duplex",
-    floorspace: 1264,
     beds: 3,
     baths: 1,
-    price: 295000,
-    parking: 2,
-    construction: ["fireplace", "landry"],
+    price: 2950,
+    startDate: "2022-8-14",
   },
   {
     id: "651263730501",
@@ -22,12 +20,10 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/2.jpg",
     type: "Condo",
-    floorspace: 768,
     beds: 2,
     baths: 2,
-    price: 445000,
-    parking: 1,
-    construction: ["elevator", "garage"],
+    price: 4450,
+    startDate: "2022-9-14",
   },
   {
     id: "3511539610225",
@@ -37,12 +33,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/3.jpg",
     type: "Single Family",
-    floorspace: 1264,
+
     beds: 4,
     baths: 1,
-    price: 325000,
-    parking: 0,
-    construction: ["basement", "landry"],
+    price: 3250,
+    startDate: "2022-5-14",
   },
   {
     id: "2511639410001",
@@ -52,12 +47,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/4.jpg",
     type: "Townhouse",
-    floorspace: 1074,
+
     beds: 3,
     baths: 1,
-    price: 665000,
-    parking: 0,
-    construction: ["fireplace", "gym"],
+    price: 6650,
+    startDate: "2022-3-14",
   },
   {
     id: "2411639439991",
@@ -67,12 +61,10 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/5.jpg",
     type: "Studio",
-    floorspace: 700,
     beds: 1,
     baths: 1,
-    price: 265000,
-    parking: 1,
-    construction: ["landry", "gym"],
+    price: 2650,
+    startDate: "2022-4-14",
   },
   {
     id: "1522639490009",
@@ -82,12 +74,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/6.jpg",
     type: "Multi Family",
-    floorspace: 1630,
+
     beds: 3,
     baths: 2,
-    price: 765000,
-    parking: 3,
-    construction: ["basement", "fireplace"],
+    price: 7650,
+    startDate: "2022-8-30",
   },
   {
     id: "19639490088",
@@ -97,12 +88,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/7.jpg",
     type: "Studio",
-    floorspace: 1200,
+
     beds: 1,
     baths: 1,
-    price: 215000,
-    parking: 3,
-    construction: ["elevator", "garage"],
+    price: 2150,
+    startDate: "2022-9-1",
   },
   {
     id: "1122459390065",
@@ -112,12 +102,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/8.jpg",
     type: "Multi Family",
-    floorspace: 2100,
+
     beds: 3,
     baths: 1,
-    price: 845000,
-    parking: 3,
-    construction: ["basement", "pool"],
+    price: 8450,
+    startDate: "2022-10-31",
   },
   {
     id: "1722679430009",
@@ -127,12 +116,11 @@ const estate_data = [
     image:
       "https://raw.githubusercontent.com/BrianQMclaren/real-estate/master/public/img/property/9.jpg",
     type: "Single Family",
-    floorspace: 2300,
+
     beds: 2,
     baths: 1,
-    price: 650000,
-    parking: 3,
-    construction: ["garage", "landry"],
+    price: 6500,
+    startDate: "2022-12-25",
   },
 ];
 
