@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
+import estate_data from "../backend/data";
 import Card from "../components/Card";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import { GlobalContext } from "../context/GlobalContext";
 
 function Home() {
-  const { data } = useContext(GlobalContext);
+  const { data, setData } = useContext(GlobalContext);
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -13,7 +14,24 @@ function Home() {
   function handleChange(e) {
     setSearchValue(e.target.value);
   }
-  console.log(data.length);
+
+  // Search by city/address/type/Area of property
+  function handleSearch() {
+    let updatedData = estate_data;
+    updatedData = updatedData.filter(
+      (data) =>
+        data.city.toLowerCase().includes(searchValue.toLowerCase()) ||
+        data.address.toLowerCase().includes(searchValue.toLowerCase()) ||
+        data.type.toLowerCase().includes(searchValue.toLowerCase()) ||
+        data.area.toLowerCase().includes(searchValue.toLowerCase())
+    );
+
+    setData(updatedData);
+  }
+
+  function handleKey(e) {
+    e.code === "Enter" && handleSearch();
+  }
 
   return (
     <header className="container max-w-screen-xl mx-auto py-8 px-8">
@@ -26,6 +44,7 @@ function Home() {
           name={"searchbar"}
           value={searchValue}
           setValue={setSearchValue}
+          onKeyDown={handleKey}
         />
       </div>
 

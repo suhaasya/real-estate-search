@@ -59,49 +59,55 @@ function FilterBar() {
 
     setData(updatedData);
     setShowMenu(false);
-    setFilterData({
-      location: "",
-      propertyType: "",
-      minPrice: 1000,
-      maxPrice: 10000,
-      moveDate: "",
-    });
+
+    // Reset filter values
+    // setFilterData({
+    //   location: "",
+    //   propertyType: "",
+    //   minPrice: 1000,
+    //   maxPrice: 10000,
+    //   moveDate: "",
+    // });
   }
 
   return (
-    <div className="p-8 bg-white rounded mb-8 flex justify-between">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4  p-8 bg-white rounded mb-8 lg:flex lg:justify-between">
       <div>
-        <p>Location</p>
+        <p className="text-gray font-medium">Location</p>
         <input
-          placeholder="eg. New York"
+          placeholder="eg. Scarsdale"
           name={"location"}
           value={filterData.location}
           onChange={handleChange}
+          className="text-xl font-semibold text-dark_purple"
         />
       </div>
       <div>
-        <p>When</p>
+        <p className="text-gray font-medium">Move in Date</p>
         <input
           placeholder="Move in Date"
           type={"date"}
           name="moveDate"
           onChange={handleChange}
           value={filterData.moveDate}
+          className="text-xl font-semibold text-dark_purple"
         />
       </div>
       <div className="">
-        <p>Price</p>
+        <p className="text-gray font-medium">Price</p>
         <div
           className="flex items-center hover:cursor-pointer"
           onClick={() => setShowMenu((prev) => !prev)}
         >
-          <p className="mr-8">Choose</p>
+          <p className="mr-8 text-xl font-semibold">
+            ${filterData.minPrice} to ${filterData.maxPrice}
+          </p>
           <AiOutlineDown />
         </div>
         <div className={!showMenu && "hidden relative"}>
           <div className="absolute bg-white border-solid border p-4 rounded">
             <div>
-              <label>Min Value</label>
+              <label className="text-gray font-medium">Min Value</label>
               <div className="flex items-center gap-2">
                 <input
                   type={"range"}
@@ -117,7 +123,7 @@ function FilterBar() {
             </div>
 
             <div>
-              <label>Max Value</label>
+              <label className="text-gray font-medium">Max Value</label>
               <div className="flex items-center gap-2">
                 <input
                   type={"range"}
@@ -134,11 +140,12 @@ function FilterBar() {
         </div>
       </div>
       <div>
-        <p>Property Type</p>
+        <p className="text-gray font-medium">Property Type</p>
         <select
           name={"propertyType"}
           onChange={handleChange}
           value={filterData.propertyType}
+          className="text-xl font-semibold text-dark_purple"
         >
           <option>Choose</option>
           <option>Duplex</option>

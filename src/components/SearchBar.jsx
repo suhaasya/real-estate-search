@@ -1,7 +1,7 @@
 import React from "react";
 import { MdOutlineCancel } from "react-icons/md";
 
-function SearchBar({ onChange, setValue, value, name }) {
+function SearchBar({ onChange, setValue, value, name, onKeyDown }) {
   function handleClick() {
     setValue("");
   }
@@ -15,6 +15,7 @@ function SearchBar({ onChange, setValue, value, name }) {
         placeholder="Search with Search Bar"
         onChange={(e) => onChange(e)}
         value={value}
+        onKeyDown={(e) => onKeyDown(e)}
       />
       <button className="text-purple" onClick={handleClick}>
         <MdOutlineCancel />
@@ -25,6 +26,7 @@ function SearchBar({ onChange, setValue, value, name }) {
 
 SearchBar.defaultProps = {
   onChange: () => {},
+  onKeyDown: () => {},
 };
 
 export default SearchBar;
